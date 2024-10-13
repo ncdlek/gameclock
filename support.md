@@ -3,6 +3,6 @@
 If you need assistance with our app, please contact us using one of the following methods:
 
 - Email: engin@yazilan.org
-- GitHub Issues: [[Link to your GitHub Issues page]](https://github.com/ncdlek/gameclock.github.io/issues)
+- GitHub Issues: [[GitHub Issues page]](https://github.com/ncdlek/gameclock.github.io/issues)
 
 We aim to respond to all inquiries within 48 hours.
