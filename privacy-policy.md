@@ -1,6 +1,6 @@
 # Privacy Policy for Game Clock Pro
 
-Last updated: [Current Date]
+Last updated: [2024-10-28]
 
 ## Overview
 Game Clock Pro is committed to protecting your privacy. This app is designed to function as a standalone game clock and timer, and we collect minimal data necessary for the app's operation.
