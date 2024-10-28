@@ -1,27 +1,53 @@
-# Privacy Policy for Advance Game Clock for Go and Chess
+# Privacy Policy for Game Clock Pro
 
-Last updated: [2024-10-13]
+Last updated: [Current Date]
 
-## Introduction
+## Overview
+Game Clock Pro is committed to protecting your privacy. This app is designed to function as a standalone game clock and timer, and we collect minimal data necessary for the app's operation.
 
-This privacy policy explains how we collect, use, and protect your personal information when you use our Advance Game Clock for Go and Chess app.
+## Information Collection and Use
+Game Clock Pro operates offline and does not collect any personal information. The app:
+- Does not require user registration
+- Does not track user location
+- Does not collect usage statistics
+- Does not use analytics services
+- Does not contain advertisements
 
-## Information We Collect
+### Data Stored Locally
+The following information is stored locally on your device only:
+- App preferences and settings
+- Custom time presets
+- Theme preferences
+- Sound and vibration settings
+- Language preferences
 
-We do not collect any personal information from users of our app.
+This data never leaves your device and is only used to provide you with a better user experience.
 
-## How We Use Your Information
+## Technical Requirements
+The app requires the following permissions:
+- Audio permissions (for voice announcements)
+- Vibration capability (for time notifications)
 
-As we do not collect any personal information, we do not use your information in any way.
+These permissions are used solely for timer functionality and can be enabled/disabled through your device settings.
 
-## Data Storage and Security
+## Third-Party Services
+Game Clock Pro does not use any third-party services, analytics, or tracking tools.
 
-No personal data is stored or transmitted by our app.
+## Data Security
+Since all data is stored locally on your device, data security is managed by your device's built-in security features.
 
-## Changes to This Privacy Policy
+## Children's Privacy
+Our app does not collect any personal information from anyone, including children under 13.
 
-We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.
+## Changes to This Policy
+We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.
 
 ## Contact Us
+If you have any questions about this Privacy Policy, please contact us at:
+[Your Contact Email]
 
-If you have any questions about this Privacy Policy, please contact us at engin@yazilan.org.
+## App Store Privacy Details
+Categories of data collected and used by Game Clock Pro:
+- Data Not Collected: We do not collect any user data
+- Data Not Shared: We do not share any data with third parties
+- Data Not Linked: No data is linked to user identity
