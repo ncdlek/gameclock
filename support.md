@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,118 +13,105 @@
             padding: 20px;
             color: #333;
         }
-        h1, h2 {
-            color: #2c3e50;
-        }
-        .section {
-            margin-bottom: 30px;
-        }
-        .question {
-            margin-bottom: 20px;
-        }
-        .contact {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 40px;
-        }
-        .language-selector {
+        .language-nav {
             position: sticky;
             top: 0;
             background: white;
             padding: 10px 0;
             border-bottom: 1px solid #eee;
             margin-bottom: 20px;
+            text-align: center;
         }
-        .language-selector button {
+        .language-nav a {
             padding: 5px 10px;
             margin: 0 5px;
             border: 1px solid #ddd;
             border-radius: 4px;
-            background: white;
-            cursor: pointer;
+            text-decoration: none;
+            color: #333;
         }
-        .language-selector button.active {
-            background: #2c3e50;
-            color: white;
+        .section {
+            margin-bottom: 40px;
+            padding-top: 20px;
+            text-align: center;
         }
-        [lang] {
-            display: none;
+        .contact {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
         }
-        [lang].active {
-            display: block;
+        a {
+            color: #2c3e50;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <div class="language-selector">
-        <button onclick="setLanguage('en')" data-lang="en">English</button>
-        <button onclick="setLanguage('zh')" data-lang="zh">中文</button>
-        <button onclick="setLanguage('ja')" data-lang="ja">日本語</button>
-        <button onclick="setLanguage('ko')" data-lang="ko">한국어</button>
-        <button onclick="setLanguage('ru')" data-lang="ru">Русский</button>
-        <button onclick="setLanguage('tr')" data-lang="tr">Türkçe</button>
-    </div>
+    <nav class="language-nav">
+        <a href="#en">English</a>
+        <a href="#zh">中文</a>
+        <a href="#ja">日本語</a>
+        <a href="#ko">한국어</a>
+        <a href="#ru">Русский</a>
+        <a href="#tr">Türkçe</a>
+    </nav>
 
-    <!-- English Content -->
-    <div lang="en" class="active">
+    <!-- English -->
+    <div id="en" class="section">
         <h1>Game Clock Pro Support</h1>
-        <!-- English content here -->
+        <div class="contact">
+            <p>For support, please contact:</p>
+            <p><a href="mailto:engin@yazilan.org">engin@yazilan.org</a></p>
+        </div>
     </div>
 
-    <!-- Chinese Content -->
-    <div lang="zh">
+    <!-- Chinese -->
+    <div id="zh" class="section">
         <h1>Game Clock Pro 支持</h1>
-        <!-- Chinese content here -->
+        <div class="contact">
+            <p>如需支持，请联系：</p>
+            <p><a href="mailto:engin@yazilan.org">engin@yazilan.org</a></p>
+        </div>
     </div>
 
-    <!-- Japanese Content -->
-    <div lang="ja">
+    <!-- Japanese -->
+    <div id="ja" class="section">
         <h1>Game Clock Pro サポート</h1>
-        <!-- Japanese content here -->
+        <div class="contact">
+            <p>サポートが必要な場合は、以下までご連絡ください：</p>
+            <p><a href="mailto:engin@yazilan.org">engin@yazilan.org</a></p>
+        </div>
     </div>
 
-    <!-- Korean Content -->
-    <div lang="ko">
+    <!-- Korean -->
+    <div id="ko" class="section">
         <h1>Game Clock Pro 지원</h1>
-        <!-- Korean content here -->
+        <div class="contact">
+            <p>지원이 필요하시면 연락해 주세요:</p>
+            <p><a href="mailto:engin@yazilan.org">engin@yazilan.org</a></p>
+        </div>
     </div>
 
-    <!-- Russian Content -->
-    <div lang="ru">
+    <!-- Russian -->
+    <div id="ru" class="section">
         <h1>Поддержка Game Clock Pro</h1>
-        <!-- Russian content here -->
+        <div class="contact">
+            <p>Для поддержки обращайтесь:</p>
+            <p><a href="mailto:engin@yazilan.org">engin@yazilan.org</a></p>
+        </div>
     </div>
 
-    <!-- Turkish Content -->
-    <div lang="tr">
+    <!-- Turkish -->
+    <div id="tr" class="section">
         <h1>Game Clock Pro Destek</h1>
-        <!-- Turkish content here -->
+        <div class="contact">
+            <p>Destek için iletişim:</p>
+            <p><a href="mailto:engin@yazilan.org">engin@yazilan.org</a></p>
+        </div>
     </div>
-
-    <script>
-        function setLanguage(lang) {
-            // Hide all language sections
-            document.querySelectorAll('[lang]').forEach(el => {
-                el.classList.remove('active');
-            });
-            // Show selected language section
-            document.querySelector(`[lang="${lang}"]`).classList.add('active');
-            // Update buttons
-            document.querySelectorAll('.language-selector button').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            document.querySelector(`button[data-lang="${lang}"]`).classList.add('active');
-            // Save preference
-            localStorage.setItem('preferred-language', lang);
-        }
-
-        // Load preferred language or default to English
-        document.addEventListener('DOMContentLoaded', () => {
-            const preferredLang = localStorage.getItem('preferred-language') || 
-                                navigator.language.split('-')[0] || 'en';
-            setLanguage(preferredLang);
-        });
-    </script>
 </body>
 </html>
