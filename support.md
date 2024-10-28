@@ -28,77 +28,103 @@
             border-radius: 8px;
             margin-top: 40px;
         }
+        .language-selector {
+            position: sticky;
+            top: 0;
+            background: white;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 20px;
+        }
+        .language-selector button {
+            padding: 5px 10px;
+            margin: 0 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background: white;
+            cursor: pointer;
+        }
+        .language-selector button.active {
+            background: #2c3e50;
+            color: white;
+        }
+        [lang] {
+            display: none;
+        }
+        [lang].active {
+            display: block;
+        }
     </style>
 </head>
 <body>
-    <h1>Game Clock Pro Support</h1>
-
-    <div class="section">
-        <h2>Frequently Asked Questions</h2>
-
-        <div class="question">
-            <h3>What time control systems are supported?</h3>
-            <p>Game Clock Pro supports all major time control systems used in Go and Chess:</p>
-            <ul>
-                <li>Japanese Byo-yomi</li>
-                <li>Canadian Overtime</li>
-                <li>Fischer Time</li>
-                <li>Bronstein Delay</li>
-                <li>Absolute Time</li>
-                <li>Simple Delay</li>
-            </ul>
-        </div>
-
-        <div class="question">
-            <h3>How do I set up Japanese Byo-yomi?</h3>
-            <p>To set up Japanese Byo-yomi:</p>
-            <ol>
-                <li>Select "Japanese Byo-yomi" from time control options</li>
-                <li>Set the main time</li>
-                <li>Set the number of periods</li>
-                <li>Set the time per period</li>
-                <li>Tap "Start" to begin</li>
-            </ol>
-        </div>
-
-        <div class="question">
-            <h3>Can I customize the voice announcements?</h3>
-            <p>Yes, you can:</p>
-            <ul>
-                <li>Enable/disable voice announcements</li>
-                <li>Choose from multiple languages</li>
-                <li>Set custom time thresholds for announcements</li>
-                <li>Adjust volume in settings</li>
-            </ul>
-        </div>
-
-        <div class="question">
-            <h3>How do I save my preferred time settings?</h3>
-            <p>To save your preferred time settings:</p>
-            <ol>
-                <li>Configure your desired time control</li>
-                <li>Tap the "Save" icon</li>
-                <li>Name your preset</li>
-                <li>Access saved presets from the main screen</li>
-            </ol>
-        </div>
+    <div class="language-selector">
+        <button onclick="setLanguage('en')" data-lang="en">English</button>
+        <button onclick="setLanguage('zh')" data-lang="zh">中文</button>
+        <button onclick="setLanguage('ja')" data-lang="ja">日本語</button>
+        <button onclick="setLanguage('ko')" data-lang="ko">한국어</button>
+        <button onclick="setLanguage('ru')" data-lang="ru">Русский</button>
+        <button onclick="setLanguage('tr')" data-lang="tr">Türkçe</button>
     </div>
 
-    <div class="section">
-        <h2>Quick Tips</h2>
-        <ul>
-            <li>Double-tap the timer to pause</li>
-            <li>Swipe down to access quick settings</li>
-            <li>Long press on a preset to edit or delete</li>
-            <li>Rotate device for alternative layout</li>
-        </ul>
+    <!-- English Content -->
+    <div lang="en" class="active">
+        <h1>Game Clock Pro Support</h1>
+        <!-- English content here -->
     </div>
 
-    <div class="contact">
-        <h2>Need More Help?</h2>
-        <p>If you couldn't find the answer you're looking for, please contact us:</p>
-        <p>Email: support@gameclockpro.com</p>
-        <p>We typically respond within 24 hours.</p>
+    <!-- Chinese Content -->
+    <div lang="zh">
+        <h1>Game Clock Pro 支持</h1>
+        <!-- Chinese content here -->
     </div>
+
+    <!-- Japanese Content -->
+    <div lang="ja">
+        <h1>Game Clock Pro サポート</h1>
+        <!-- Japanese content here -->
+    </div>
+
+    <!-- Korean Content -->
+    <div lang="ko">
+        <h1>Game Clock Pro 지원</h1>
+        <!-- Korean content here -->
+    </div>
+
+    <!-- Russian Content -->
+    <div lang="ru">
+        <h1>Поддержка Game Clock Pro</h1>
+        <!-- Russian content here -->
+    </div>
+
+    <!-- Turkish Content -->
+    <div lang="tr">
+        <h1>Game Clock Pro Destek</h1>
+        <!-- Turkish content here -->
+    </div>
+
+    <script>
+        function setLanguage(lang) {
+            // Hide all language sections
+            document.querySelectorAll('[lang]').forEach(el => {
+                el.classList.remove('active');
+            });
+            // Show selected language section
+            document.querySelector(`[lang="${lang}"]`).classList.add('active');
+            // Update buttons
+            document.querySelectorAll('.language-selector button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelector(`button[data-lang="${lang}"]`).classList.add('active');
+            // Save preference
+            localStorage.setItem('preferred-language', lang);
+        }
+
+        // Load preferred language or default to English
+        document.addEventListener('DOMContentLoaded', () => {
+            const preferredLang = localStorage.getItem('preferred-language') || 
+                                navigator.language.split('-')[0] || 'en';
+            setLanguage(preferredLang);
+        });
+    </script>
 </body>
 </html>
